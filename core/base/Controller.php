@@ -1,15 +1,19 @@
 <?php 
 class Controller{
-	protected $template = 'default';
+	protected $template  = 'default',
+			  $starpage  = 'start.php',
+			  $endpage   = 'end.php',
+			  $routeView = '';
 			  
 	public function view($view, $data = []){
 		$url = Url::parse();
 		if(empty($url[0])){
 			unset($url[0]);
 		}
-		print_r($url);
-		require_once TEMPLATES . $this->template . DS . 'start.php';
+		$this->routeView = TEMPLATES . $this->template . DS;
+
+		require_once $this->routeView . $this->starpage;
 		require_once VIEWS . $view . '.php';
-		require_once TEMPLATES . $this->template . DS . 'end.php';
+		require_once $this->routeView . $this->endpage;
 	}
 }
