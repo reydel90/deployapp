@@ -16,3 +16,5 @@ define('ENV', CONFIG_PATH . 'environments' . DS);
 //Core routes
 define('BASE', 		CORE_PATH . 'base' 		. DS);
 define('FUNCTIONS', CORE_PATH . 'functions' . DS);
+
+echo 'works';
