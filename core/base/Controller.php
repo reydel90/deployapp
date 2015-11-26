@@ -3,7 +3,9 @@ class Controller{
 	protected $template  = 'default',
 			  $starpage  = 'start.php',
 			  $endpage   = 'end.php',
+			  $view      = '',
 			  $routeView = '';
+
 			  
 	public function view($view, $data = []){
 		$url = Url::parse();
@@ -11,9 +13,14 @@ class Controller{
 			unset($url[0]);
 		}
 		$this->routeView = TEMPLATES . $this->template . DS;
+		if(!file_exists(VIEWS . $view . '.php')){
+			$this->view = 'landing.php';
+		}else{
+			$this->view = $view . '.php';
+		}
 
 		require_once $this->routeView . $this->starpage;
-		require_once VIEWS . $view . '.php';
+		require_once VIEWS . $this->$view;
 		require_once $this->routeView . $this->endpage;
 	}
 }
