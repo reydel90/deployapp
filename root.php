@@ -16,5 +16,7 @@ define('ENV', CONFIG_PATH . 'environments' . DS);
 //Core routes
 define('BASE', 		CORE_PATH . 'base' 		. DS);
 define('FUNCTIONS', CORE_PATH . 'functions' . DS);
+//Templates routes
+define('TEMPLATES', VIEWS . 'templates' . DS);
 
 require_once CONFIG_PATH . 'init.php';
