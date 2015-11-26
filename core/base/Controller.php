@@ -3,7 +3,7 @@ class Controller{
 	protected $template  = 'default',
 			  $starpage  = 'start.php',
 			  $endpage   = 'end.php',
-			  $view      = '',
+			  $view      = 'landing.php',
 			  $routeView = '';
 
 			  
@@ -13,9 +13,7 @@ class Controller{
 			unset($url[0]);
 		}
 		$this->routeView = TEMPLATES . $this->template . DS;
-		if(!file_exists(VIEWS . $view . '.php')){
-			$this->view = 'landing.php';
-		}else{
+		if(file_exists(VIEWS . $view . '.php')){
 			$this->view = $view . '.php';
 		}
 
