@@ -6,4 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Controller' => $baseDir . '/core/base/Controller.php',
+    'Request' => $baseDir . '/core/base/Request.php',
+    'Url' => $baseDir . '/core/functions/Url.php',
 );
