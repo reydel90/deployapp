@@ -20,4 +20,7 @@ class Controller{
 	public function template(){
 		return TEMPLATES . $this->template . DS;
 	}
+	public function templates_assets(){
+		return TEMPLATES_ASSETS . $this->template . '/assets/';
+	}
 }
