@@ -12,9 +12,12 @@ class Controller{
 			unset($url[0]);
 		}
 		$this->routeView = TEMPLATES . $this->template . DS;
-
 		require_once $this->routeView . $this->starpage;
 		require_once VIEWS . $view . '.php';
 		require_once $this->routeView . $this->endpage;
+	}
+
+	public function template(){
+		return TEMPLATES . $this->template . DS;
 	}
 }

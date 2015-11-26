@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>works</title>
-</head>
-<body>
-
+<?php
+	include_once Controller::template() . 'blocks' . DS . 'head.php';
+	include_once Controller::template() . 'blocks' . DS . 'nav.php';
+	
