@@ -17,4 +17,4 @@ define('ENV', CONFIG_PATH . 'environments' . DS);
 define('BASE', 		CORE_PATH . 'base' 		. DS);
 define('FUNCTIONS', CORE_PATH . 'functions' . DS);
 
-echo 'works';
+require_once CONFIG_PATH . 'init.php';
