@@ -16,7 +16,7 @@ class Controller{
 		if(file_exists(VIEWS . $view . '.php')){
 			$this->view = $view . '.php';
 		}
-
+		echo $this->view;
 		require_once $this->routeView . $this->starpage;
 		require_once VIEWS . $this->$view;
 		require_once $this->routeView . $this->endpage;
