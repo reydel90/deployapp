@@ -1,0 +1,5 @@
+{
+	"autoload":{
+		"classmap": ["core/classes/base", "core/classes/functions"]
+	}
+}
